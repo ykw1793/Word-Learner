@@ -1,0 +1,12 @@
+#!/bin/sh
+
+SHELL_PATH="$( cd "$(dirname "$0" )" ; cd .. ; pwd -P )"
+
+cd $SHELL_PATH
+
+python -m venv venv
+. venv/bin/activate
+
+pip install --quiet --disable-pip-version-check -e .
+
+python $SHELL_PATH/src/shell.py

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+TEST_PATH="$( cd "$(dirname "$0" )" ; cd ../src/test ; pwd -P )"
+
+python -m unittest discover -s $TEST_PATH
+
